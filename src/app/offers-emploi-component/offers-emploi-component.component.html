@@ -1,0 +1,34 @@
+
+<input type="text" name="filter" [(ngModel)] = "filter" >
+
+<div *ngFor="let p of listarticles">
+<div *ngIf="p.entreprise  == filter  || filter==null"  >
+
+  <table>
+    <tr>
+      <td>reference</td>
+      <td>{{p.reference}}</td>
+
+      <td>titre</td>
+      <td>{{ p.titre }}</td>
+
+      <td>entreprise</td>
+      <td>{{ p.entreprise }}</td>
+
+      <td>etat</td>
+      <td>{{ p.etat }}</td>
+    </tr>
+    
+       <button    [disabled]="p.etat==false"     > postuler</button>
+
+       
+  </table>
+  </div>
+     
+
+         <br>
+</div>
+    <button   class="btn btn-primary"  (click)="calcul()"  >bilan</button>
+         {{nbre2}}
+
+

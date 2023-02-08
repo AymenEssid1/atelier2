@@ -1,0 +1,31 @@
+<br>
+    <hr>    
+{{titre}}
+    <hr>
+
+
+<div *ngFor="let article of listArticles,  let i=index" >   
+
+    
+<div *ngIf="article.categorie != 'Travail'">
+  
+<div *ngIf="article.categorie == 'Education'" [ngStyle]="{'background-color':'blue' } ">
+
+
+            <p>{{ article.titre }}</p>
+            <p>Auteur:{{ article.auteur }}</p>
+            <p>Date: {{ article.date }}</p>
+            <p>Contenu: {{ article.contenu }}</p>
+             <p>categorie: {{ article.categorie }}</p>
+
+            <br>
+            <hr>
+        </div>
+        
+
+</div>
+          <input type="number" name="price" value={{i}}>
+
+</div>
+
+
